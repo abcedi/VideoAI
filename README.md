@@ -31,7 +31,7 @@ VideoAI v0.5.0 can accept:
 All successful source modes converge on the same evidence backend and produce a `video-ai-evidence/v4` package.
 
 ```text
-Local video ───────────────────────┐
+Local video ──────────────────────┐
                                   │
 YouTube URL ── acquisition ───────┤
                                   ├─> common evidence backend
