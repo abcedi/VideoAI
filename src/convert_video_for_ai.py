@@ -128,16 +128,16 @@ def source_handle(source_url: str | None) -> str | None:
     host = (parsed.hostname or "").lower()
     parts = [unquote(p) for p in parsed.path.split("/") if p]
 
-    if "tiktok.com" in host:
+    if host == "tiktok.com" or host.endswith(".tiktok.com"):
         for part in parts:
             if part.startswith("@") and len(part) > 1:
                 return safe_component(part[1:], max_length=40, fallback="creator")
 
-    if "instagram.com" in host and len(parts) >= 2:
+    if (host == "instagram.com" or host.endswith(".instagram.com")) and len(parts) >= 2:
         if parts[0] not in {"reel", "reels", "p", "tv"}:
             return safe_component(parts[0].lstrip("@"), max_length=40, fallback="creator")
 
-    if "youtube.com" in host and parts and parts[0].startswith("@"):
+    if (host == "youtube.com" or host.endswith(".youtube.com")) and parts and parts[0].startswith("@"):
         return safe_component(parts[0][1:], max_length=40, fallback="creator")
 
     return None
