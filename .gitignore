@@ -1,0 +1,100 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Secrets / local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# VideoAI generated output / private development
+Jobs/
+Acquisitions/
+acceptance/
+promotion-backups/
+release-candidate/
+rollback/
+archive-analysis/
+ai-pack/
+selected/
+visual_sheets/
+timeline_sheets/
+*-ai.zip
+acquisition.json
+transcript.json
+transcript.txt
+selection.json
+SOURCE.txt
+README_AI.md
+TIMELINE_EVIDENCE.md
+compact_context.md
+
+# Raw media / subtitle files
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.m4v
+*.mpeg
+*.mpg
+*.ts
+*.m2ts
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.aac
+*.ogg
+*.srt
+*.vtt
+*.ass
+*.ssa
+
+# Archives
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+
+# Browser/runtime state
+playwright-report/
+test-results/
+browser-profile/
+chrome-profile/
+user-data-dir/
+
+# Local AI/editor state
+.claude/
+.codex/
+.cursor/
+.idea/
+.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~

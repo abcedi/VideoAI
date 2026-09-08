@@ -1,0 +1,98 @@
+name: Bug report
+description: Report reproducible incorrect behavior in VideoAI.
+title: "[Bug] "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a VideoAI problem.
+
+        Do not include passwords, tokens, browser cookies, private media,
+        signed CDN URLs, or other sensitive information.
+
+        For vulnerabilities, follow SECURITY.md instead of filing details publicly.
+
+  - type: input
+    id: version
+    attributes:
+      label: VideoAI version
+      placeholder: "0.5.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Input mode
+      options:
+        - Local video
+        - YouTube URL
+        - TikTok URL
+        - Backend/repack only
+        - GUI/startup
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe observed and expected behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Prefer a public or synthetic example.
+      placeholder: |
+        1. Launch...
+        2. Select...
+        3. Run...
+        4. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        Windows:
+        PowerShell:
+        Python:
+        uv:
+        FFmpeg:
+        Deno:
+        GPU/driver:
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Redact private paths, cookies, tokens, and signed URLs.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Sensitive-data check
+      options:
+        - label: I removed passwords, tokens, cookies, signed URLs, and private content from this report.
+          required: true
+
+  - type: checkboxes
+    id: search
+    attributes:
+      label: Existing issues
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true

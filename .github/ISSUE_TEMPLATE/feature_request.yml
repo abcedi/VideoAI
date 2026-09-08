@@ -1,0 +1,64 @@
+name: Feature request
+description: Suggest an improvement, new workflow, or architectural change.
+title: "[Feature] "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        VideoAI is intentionally early-stage and improvement ideas are welcome.
+        Describe the problem first, then the proposed solution.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or limitation
+      description: What is difficult, missing, unsafe, slow, or confusing today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Describe how you think it should be solved.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - GUI / UX
+        - Installation / packaging
+        - Local-video workflow
+        - YouTube acquisition
+        - TikTok acquisition
+        - Transcript / speech-to-text
+        - Evidence selection
+        - Evidence format
+        - Performance
+        - Security / privacy
+        - Testing / CI
+        - Documentation
+        - Cross-platform support
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+
+  - type: textarea
+    id: upstream
+    attributes:
+      label: Related upstream project or prior art
+      description: Link projects/research that should be credited or considered.
+    validations:
+      required: false
