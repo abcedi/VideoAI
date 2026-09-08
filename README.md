@@ -2,6 +2,8 @@
 
 **Turn local videos, TikTok URLs, and YouTube URLs into AI-ready transcripts and visual evidence.**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > **Status:** Early-stage initial public release<br>
 > **Public release:** VideoAI v0.5.0<br>
 > **Primary platform:** Windows<br>
