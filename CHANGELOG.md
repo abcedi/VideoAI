@@ -4,6 +4,18 @@ This changelog tracks the public VideoAI repository.
 
 The project existed privately in earlier TikTokAI/VideoAI forms before this public Git repository. Those versions are not represented by fabricated historical Git commits.
 
+## [Unreleased]
+
+### Security
+
+- Hardened TikTok, Instagram, and YouTube hostname-boundary validation for creator/handle extraction, resolving three CodeQL High-severity `Incomplete URL substring sanitization` findings.
+
+### Documentation
+
+- Corrected the MIT License copyright holder to `Abcedi Ilacas`.
+- Added an MIT License badge to the README.
+- Corrected alignment in the README source-mode diagram.
+
 ## [0.5.0] - 2026-09
 
 Initial public release.
