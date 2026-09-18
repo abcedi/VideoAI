@@ -24,7 +24,7 @@ $Helper = Join-Path `
     "download_tiktok_for_videoai.py"
 
 $ExpectedHelperHash =
-    "9CD1F3DA519B44314DF07810590A2962DAF9CBB7D61A6F05943A459B21293793"
+    "FCDDFD4B3242A603FAAF6F5BB20D763ED4AA7DAC2EC02969CAA6CEF23F90E4E0"
 
 if(-not (Test-Path -LiteralPath $Helper -PathType Leaf)){
     throw "TikTok Python helper not found: $Helper"
