@@ -5,7 +5,7 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 *.txt text eol=lf
-*.ps1 text
+*.ps1 text eol=lf
 
 *.mp4 binary
 *.mov binary
