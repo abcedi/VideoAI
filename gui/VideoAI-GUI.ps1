@@ -851,8 +851,12 @@ $convertButton.Add_Click({
                         throw "TikTok acquisition helper missing: $TikTokHelper"
                     }
 
-                    $expectedTikTokHelperHash =
-                        "02B8806FAED5A3054BB2F80F61B581A262A282EECA4A5F268983F47C6C4E220A"
+                    # Accept the canonical LF wrapper and the equivalent
+                    # transitional CRLF form used by existing Windows clones.
+                    $expectedTikTokHelperHashes = @(
+                        "94BE272206BAA3C925C3BD2EF23F6DA5648124AFB698F1302AF81D6D1123BF62"
+                        "4C72D945E59400ABE12F20CE26FAF160367A70CC731F9DA1D5AF1339FF41D73A"
+                    )
 
                     $actualTikTokHelperHash = (
                         Get-FileHash `
@@ -861,13 +865,14 @@ $convertButton.Add_Click({
                     ).Hash
 
                     if (
-                        $actualTikTokHelperHash -ne
-                        $expectedTikTokHelperHash
+                        $actualTikTokHelperHash -notin
+                        $expectedTikTokHelperHashes
                     ) {
                         throw (
                             "TikTok acquisition helper hash mismatch. " +
-                            "Expected $expectedTikTokHelperHash; " +
-                            "found $actualTikTokHelperHash."
+                            "Expected one of: " +
+                            ($expectedTikTokHelperHashes -join ", ") +
+                            "; found $actualTikTokHelperHash."
                         )
                     }
 
