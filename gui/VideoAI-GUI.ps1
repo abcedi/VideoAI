@@ -852,7 +852,7 @@ $convertButton.Add_Click({
                     }
 
                     $expectedTikTokHelperHash =
-                        "02B8806FAED5A3054BB2F80F61B581A262A282EECA4A5F268983F47C6C4E220A"
+                        "94BE272206BAA3C925C3BD2EF23F6DA5648124AFB698F1302AF81D6D1123BF62"
 
                     $actualTikTokHelperHash = (
                         Get-FileHash `
