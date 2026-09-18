@@ -6,6 +6,10 @@ The project existed privately in earlier TikTokAI/VideoAI forms before this publ
 
 ## [Unreleased]
 
+### Fixed
+
+- Corrected the TikTok acquisition wrapper's embedded integrity hash so it matches the shipped `download_tiktok_for_videoai.py` helper.
+
 ### Security
 
 - Hardened TikTok, Instagram, and YouTube hostname-boundary validation for creator/handle extraction, resolving three CodeQL High-severity `Incomplete URL substring sanitization` findings.
