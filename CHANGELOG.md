@@ -8,7 +8,7 @@ The project existed privately in earlier TikTokAI/VideoAI forms before this publ
 
 ### Fixed
 
-- Corrected the TikTok acquisition wrapper's embedded integrity hash so it matches the shipped `download_tiktok_for_videoai.py` helper.
+- Corrected the TikTok acquisition integrity chain so the GUI trusts the canonical shipped wrapper and the wrapper trusts the canonical shipped Python helper.
 
 ### Security
 
