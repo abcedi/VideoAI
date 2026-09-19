@@ -17,6 +17,8 @@ function Run-Script([string]$Path, [string[]]$Arguments = @()) {
     $start.CreateNoWindow = $true
     $start.RedirectStandardOutput = $true
     $start.RedirectStandardError = $true
+    $start.StandardOutputEncoding = [Text.UTF8Encoding]::new($false)
+    $start.StandardErrorEncoding = [Text.UTF8Encoding]::new($false)
     $start.Environment['UV_OFFLINE'] = '1'
     foreach ($argument in (@('-NoProfile','-File',$Path) + $Arguments)) { $start.ArgumentList.Add($argument) }
     $process = [Diagnostics.Process]::Start($start)
