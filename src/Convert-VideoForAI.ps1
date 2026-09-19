@@ -81,7 +81,18 @@ Write-Host "JobLabel:   $JobLabel"
 Write-Host "Transcript: $ResolvedTranscript"
 Write-Host "Source:     never intentionally modified"
 
-& uv @ArgsList
+# Match GUI execution for Unicode diagnostics even when invoked directly.
+$PreviousPythonUtf8 = $env:PYTHONUTF8
+$PreviousPythonEncoding = $env:PYTHONIOENCODING
+try {
+    $env:PYTHONUTF8 = "1"
+    $env:PYTHONIOENCODING = "utf-8"
+    & uv @ArgsList
+}
+finally {
+    $env:PYTHONUTF8 = $PreviousPythonUtf8
+    $env:PYTHONIOENCODING = $PreviousPythonEncoding
+}
 
 $Code = $LASTEXITCODE
 

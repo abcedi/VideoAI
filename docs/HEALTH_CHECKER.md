@@ -92,6 +92,6 @@ Sealed SHA-256 of src/Test-VideoAIHealth.ps1:
 21163BFD275D33499DAB2352834DECE9FE4D934D5342594B88B3E41981EA4810
 ```
 
-This is the health-checker deliverable for the v0.6 installation work. Installer,
-launcher, updater, uninstaller, clean-VM/CPU-only proofs and distribution
-packaging remain future work. No production-installed scripts are updated.
+This is the health-checker deliverable for the v0.6 installation work. See
+[DISTRIBUTION.md](DISTRIBUTION.md) for the lifecycle and packaging preview,
+machine acceptance commands, and remaining clean-VM release gate.

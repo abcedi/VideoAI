@@ -80,10 +80,10 @@ Verify license, update `THIRD_PARTY_NOTICES.md`, document behavior impact, and c
 ## Known infrastructure gaps
 
 - no mature automated test suite;
-- initial Windows CI covers offline TikTok integrity and health checks; broader coverage is still needed;
-- no installer;
-- no formal VideoAI package manifest;
-- no automated release build;
+- Windows CI covers offline integrity, health, lifecycle, packaging and CPU-only refusal; broader coverage is still needed;
+- preview installer exists; clean Windows desktop VM proof is pending;
+- preview package manifests exist; dependency locking remains future work;
+- ZIP/Setup build scripts exist; signing and release publication remain manual;
 - no cross-platform support contract.
 
 ## Offline regression
@@ -91,3 +91,5 @@ Verify license, update `THIRD_PARTY_NOTICES.md`, document behavior impact, and c
 Run `pwsh -NoProfile -File ./tests/Run-Regression.ps1` from the repository root.
 See [HEALTH_CHECKER.md](HEALTH_CHECKER.md) for test scope, machine acceptance,
 and the dependency-report contract.
+
+See [DISTRIBUTION.md](DISTRIBUTION.md) for builds and machine acceptance.

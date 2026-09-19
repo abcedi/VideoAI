@@ -1,6 +1,6 @@
 # Installation
 
-VideoAI v0.5.0 is a Windows-first developer-oriented release. There is not yet a polished installer.
+VideoAI is a Windows-first developer-oriented release. A v0.6 installation preview now provides per-user install, launch, update and uninstall scripts plus portable ZIP and Setup.exe builds. See [DISTRIBUTION.md](DISTRIBUTION.md) for the preview workflow and outstanding release gates. The source/manual layout below remains supported.
 
 ## Tested environment
 
