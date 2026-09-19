@@ -6,6 +6,11 @@ The project existed privately in earlier TikTokAI/VideoAI forms before this publ
 
 ## [Unreleased]
 
+### Added
+
+- Offline dependency health checker with nine required checks, optional Python/WinGet checks, structured JSON, and exit codes.
+- Deterministic TikTok integrity-chain and health-checker regression suites with Windows CI.
+
 ### Fixed
 
 - Corrected the TikTok acquisition integrity chain so the GUI trusts the canonical shipped wrapper and the wrapper trusts the canonical shipped Python helper.

@@ -80,3 +80,10 @@ Network access is also required for YouTube/TikTok URL acquisition.
 ## Next
 
 See [USAGE.md](USAGE.md). For failures, see [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+
+## Offline dependency preflight
+
+Run `pwsh -NoProfile -File ./src/Test-VideoAIHealth.ps1` before conversion.
+Add `-Json` for a structured report. System Python and WinGet are optional;
+the current conversion path requires the cached CUDA runtime.
+See [HEALTH_CHECKER.md](HEALTH_CHECKER.md) for exit codes and setup boundaries.
