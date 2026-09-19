@@ -77,3 +77,22 @@ Future investigation: Linux and macOS.
 - CI;
 - automated releases;
 - cleaner version management.
+
+## Installation and distribution v0.6 preview
+
+| Milestone | Current state |
+| --- | --- |
+| Dependency / health checker | Merged; offline regression and NVIDIA validation passed |
+| Install-VideoAI.ps1 | Implemented; transactional per-user installation tested |
+| Stable launcher | Implemented; installed/portable path resolution tested |
+| Update-VideoAI.ps1 | Implemented; validation before activation and retained releases tested |
+| Uninstall-VideoAI.ps1 | Implemented; recorded-file removal and user-file preservation tested |
+| Clean Windows VM proof | Pending; no clean desktop VM available |
+| CPU-only machine | NVIDIA-required refusal covered by fixtures and a dedicated Windows CI acceptance step |
+| NVIDIA/CUDA machine | Prepared-host lifecycle and offline cached Turbo conversion passed |
+| Portable ZIP | Built; reproducible bytes and manifest integrity tested |
+| Setup.exe | Unsigned preview built; embedded payload and unattended paths tested; manual dialog review pending |
+
+The package version is 0.6.0-preview.1; existing GUI/backend component identities
+remain unchanged. This is not the declaration of a completed v0.6 release.
+See [distribution instructions](docs/DISTRIBUTION.md).

@@ -14,3 +14,7 @@
 *.jpg binary
 *.jpeg binary
 *.png binary
+
+*.psm1 text eol=lf
+*.cs text eol=lf
+*.json text eol=lf

@@ -77,7 +77,18 @@ Write-Host "Source:     $ResolvedSourceVideo"
 Write-Host "Source URL: $SourceUrl"
 Write-Host "Job label:  $JobLabel"
 
-& uv @ArgsList
+# Match GUI execution for Unicode diagnostics even when invoked directly.
+$PreviousPythonUtf8 = $env:PYTHONUTF8
+$PreviousPythonEncoding = $env:PYTHONIOENCODING
+try {
+    $env:PYTHONUTF8 = "1"
+    $env:PYTHONIOENCODING = "utf-8"
+    & uv @ArgsList
+}
+finally {
+    $env:PYTHONUTF8 = $PreviousPythonUtf8
+    $env:PYTHONIOENCODING = $PreviousPythonEncoding
+}
 
 if ($LASTEXITCODE -ne 0) {
     throw "Repack-VideoEvidenceV4 failed with exit code $LASTEXITCODE."

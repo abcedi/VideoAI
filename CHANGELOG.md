@@ -8,10 +8,15 @@ The project existed privately in earlier TikTokAI/VideoAI forms before this publ
 
 ### Added
 
+- v0.6 per-user installation lifecycle preview with verified versioned releases, stable launcher, atomic update activation, and preservation of modified/user files during uninstall.
+- Portable ZIP and unsigned Setup.exe builders, lifecycle/packaging regression, and physical-machine acceptance scripts.
+
 - Offline dependency health checker with nine required checks, optional Python/WinGet checks, structured JSON, and exit codes.
 - Deterministic TikTok integrity-chain and health-checker regression suites with Windows CI.
 
 ### Fixed
+
+- Direct conversion and repack wrappers now select UTF-8 for Python diagnostics and restore caller environment settings.
 
 - Corrected the TikTok acquisition integrity chain so the GUI trusts the canonical shipped wrapper and the wrapper trusts the canonical shipped Python helper.
 

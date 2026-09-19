@@ -7,9 +7,15 @@ permissions:
 jobs:
   regression:
     runs-on: windows-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - name: Run deterministic offline regression
         shell: pwsh
         run: ./tests/Run-Regression.ps1
+      - name: Build preview package for CPU-only acceptance
+        shell: pwsh
+        run: ./packaging/Build-VideoAIRelease.ps1 -OutputDirectory .artifacts/cpu-proof -SkipSetup
+      - name: Prove NVIDIA-required refusal on CPU-only Windows runner
+        shell: pwsh
+        run: ./tests/Test-DistributionMachine.ps1 -PackageRoot .artifacts/cpu-proof/VideoAI-0.6.0-preview.1 -ExpectMissingNvidia
